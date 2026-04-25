@@ -126,8 +126,59 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Netlify handles the form submission automatically.
-    // If you want custom JS validation or success messages in the future, you can add it back here.
+    // ===== CONTACT FORM (Web3Forms for Vercel) =====
+    const form = document.getElementById('contactForm');
+    const successMsg = document.getElementById('formSuccess');
+    const submitBtn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const name = document.getElementById('contactName').value.trim();
+        const email = document.getElementById('contactEmail').value.trim();
+        const subject = document.getElementById('contactSubject').value.trim();
+        const message = document.getElementById('contactMessage').value.trim();
+
+        if (!name || !email || !message) {
+            alert('Please fill in all required fields.');
+            return;
+        }
+
+        submitBtn.innerHTML = "<i class='bx bx-loader-alt bx-spin'></i> Sending...";
+        submitBtn.disabled = true;
+
+        // Create the form data object for Web3Forms
+        const formData = new FormData();
+        // ⚠️ REPLACE 'YOUR_ACCESS_KEY_HERE' with the key sent to your email from web3forms.com
+        formData.append("access_key", "65cc07e3-6d13-460e-aea7-cc6a2a22e1e0");
+        formData.append("name", name);
+        formData.append("email", email);
+        formData.append("subject", subject || "New Portfolio Message");
+        formData.append("message", message);
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                form.reset();
+                successMsg.textContent = '✅ Message sent! I\'ll get back to you soon.';
+                successMsg.classList.add('show');
+                setTimeout(() => successMsg.classList.remove('show'), 5000);
+            } else {
+                alert('Something went wrong. Please try again.');
+            }
+        } catch (err) {
+            alert('Network error. Please check your connection and try again.');
+        } finally {
+            submitBtn.innerHTML = "<i class='bx bx-send'></i> Send Message";
+            submitBtn.disabled = false;
+        }
+    });
 
     // ===== DOWNLOAD CV PLACEHOLDER =====
     const cvBtn = document.getElementById('downloadCv');
