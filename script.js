@@ -126,28 +126,57 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // ===== CONTACT FORM =====
+    // ===== CONTACT FORM (Formsubmit.co) =====
     const form = document.getElementById('contactForm');
     const successMsg = document.getElementById('formSuccess');
     const submitBtn = document.getElementById('submitBtn');
-    form.addEventListener('submit', (e) => {
+
+    const FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/juliusjamesbrocales@gmail.com';
+
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const name = document.getElementById('contactName').value.trim();
         const email = document.getElementById('contactEmail').value.trim();
+        const subject = document.getElementById('contactSubject').value.trim();
         const message = document.getElementById('contactMessage').value.trim();
+
         if (!name || !email || !message) {
             alert('Please fill in all required fields.');
             return;
         }
-        submitBtn.textContent = 'Sending...';
+
+        submitBtn.innerHTML = "<i class='bx bx-loader-alt bx-spin'></i> Sending...";
         submitBtn.disabled = true;
-        setTimeout(() => {
-            form.reset();
-            successMsg.classList.add('show');
+
+        try {
+            const response = await fetch(FORMSUBMIT_ENDPOINT, {
+                method: 'POST',
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({ 
+                    name, 
+                    email, 
+                    subject: subject || 'New Portfolio Message', 
+                    message 
+                })
+            });
+
+            if (response.ok) {
+                form.reset();
+                successMsg.textContent = '✅ Message sent! I\'ll get back to you soon.';
+                successMsg.classList.add('show');
+                setTimeout(() => successMsg.classList.remove('show'), 5000);
+            } else {
+                alert('Something went wrong. Please try again.');
+            }
+        } catch (err) {
+            alert('Network error. Please check your connection and try again.');
+        } finally {
             submitBtn.innerHTML = "<i class='bx bx-send'></i> Send Message";
             submitBtn.disabled = false;
-            setTimeout(() => successMsg.classList.remove('show'), 5000);
-        }, 1200);
+        }
     });
 
     // ===== DOWNLOAD CV PLACEHOLDER =====
