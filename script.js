@@ -126,58 +126,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // ===== CONTACT FORM (Formsubmit.co) =====
-    const form = document.getElementById('contactForm');
-    const successMsg = document.getElementById('formSuccess');
-    const submitBtn = document.getElementById('submitBtn');
-
-    const FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/juliusjamesbrocales@gmail.com';
-
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const name = document.getElementById('contactName').value.trim();
-        const email = document.getElementById('contactEmail').value.trim();
-        const subject = document.getElementById('contactSubject').value.trim();
-        const message = document.getElementById('contactMessage').value.trim();
-
-        if (!name || !email || !message) {
-            alert('Please fill in all required fields.');
-            return;
-        }
-
-        submitBtn.innerHTML = "<i class='bx bx-loader-alt bx-spin'></i> Sending...";
-        submitBtn.disabled = true;
-
-        try {
-            const response = await fetch(FORMSUBMIT_ENDPOINT, {
-                method: 'POST',
-                headers: { 
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: JSON.stringify({ 
-                    name, 
-                    email, 
-                    subject: subject || 'New Portfolio Message', 
-                    message 
-                })
-            });
-
-            if (response.ok) {
-                form.reset();
-                successMsg.textContent = '✅ Message sent! I\'ll get back to you soon.';
-                successMsg.classList.add('show');
-                setTimeout(() => successMsg.classList.remove('show'), 5000);
-            } else {
-                alert('Something went wrong. Please try again.');
-            }
-        } catch (err) {
-            alert('Network error. Please check your connection and try again.');
-        } finally {
-            submitBtn.innerHTML = "<i class='bx bx-send'></i> Send Message";
-            submitBtn.disabled = false;
-        }
-    });
+    // Netlify handles the form submission automatically.
+    // If you want custom JS validation or success messages in the future, you can add it back here.
 
     // ===== DOWNLOAD CV PLACEHOLDER =====
     const cvBtn = document.getElementById('downloadCv');
