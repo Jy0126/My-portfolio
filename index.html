@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Julius James Brocales - IT Student & Web Developer. Explore my portfolio showcasing projects, skills, and more.">
+    <title>Julius James Brocales | IT Student & Web Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+        <a href="#home" class="logo">Julius<span>.</span></a>
+
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+                <i class='bx bx-moon' id="themeIcon"></i>
+            </button>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ========== HOME ========== -->
+    <section class="home" id="home">
+        <div class="home-content reveal">
+            <p class="greeting">Hi! Welcome to my portfolio</p>
+            <h1>I'm <span class="typing-name"></span><span class="cursor">|</span></h1>
+            <h2 class="role">IT Student &amp; <span>Web Developer</span></h2>
+            <p class="home-desc">
+                A passionate 3rd-year Information Technology student who loves building clean,
+                functional, and visually compelling web applications. Always learning, always growing.
+            </p>
+            <div class="home-btns">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Hire Me</a>
+            </div>
+            <div class="social-media">
+                <a href="https://www.facebook.com/naija.ibrahim.12/" target="_blank" rel="noopener" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+                <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/Jy0126" target="_blank" rel="noopener" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+            </div>
+        </div>
+
+        <div class="home-img reveal">
+            <div class="img-wrapper">
+                <img src="profile.jpg" alt="Julius James Brocales - Profile Picture">
+                <div class="img-ring"></div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="about-section">
+        <div class="section-header reveal">
+            <p class="section-label">Get to know me</p>
+            <h2 class="section-title">About <span>Me</span></h2>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-img-wrap reveal">
+                <img src="profile.jpg" alt="Julius James Brocales" class="about-img">
+                <div class="about-badge">
+                    <i class='bx bx-code-alt'></i>
+                    <span>3nd Year IT</span>
+                </div>
+            </div>
+
+            <div class="about-content reveal">
+                <h3>Hello! I'm <span>Julius James V. Brocales</span></h3>
+                <p>
+                    I'm a dedicated 3rd-year Bachelor of Science in Information Technology student with a
+                    deep passion for web and software development. I enjoy transforming ideas
+                    into fully functional digital experiences.
+                </p>
+                <p>
+                    When I'm not coding, I love exploring new technologies, working on personal projects,
+                    and continuously sharpening my skills. I believe that great software is both functional
+                    and beautiful.
+                </p>
+
+                <div class="about-info">
+                    <div class="info-item">
+                        <i class='bx bx-user'></i>
+                        <div>
+                            <span class="info-label">Name</span>
+                            <span class="info-value">Julius James V. Brocales</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class='bx bx-book'></i>
+                        <div>
+                            <span class="info-label">Degree</span>
+                            <span class="info-value">BS Information Technology</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class='bx bx-map'></i>
+                        <div>
+                            <span class="info-label">Location</span>
+                            <span class="info-value">Pili, Palestina, Camarines Sur</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class='bx bx-envelope'></i>
+                        <div>
+                            <span class="info-label">Status</span>
+                            <span class="info-value">Open to Opportunities</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="btn btn-primary" id="downloadCv">
+                    <i class='bx bx-download'></i> Download CV
+                </a>
+            </div>
+        </div>
+
+        <!-- Hobbies -->
+        <div class="hobbies-wrap reveal">
+            <h3 class="hobbies-title"><i class='bx bx-heart'></i> My <span>Hobbies</span></h3>
+            <div class="hobbies-grid">
+                <div class="hobby-card">
+                    <div class="hobby-icon"><i class='bx bx-joystick'></i></div>
+                    <span>FPS Gaming</span>
+                    <p>Love the adrenaline rush of competitive first-person shooters.</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon"><i class='bx bx-tv'></i></div>
+                    <span>Anime & Movies</span>
+                    <p>Always watching the latest anime series and binge-worthy films.</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon"><i class='bx bx-bowl-hot'></i></div>
+                    <span>Stress Eating</span>
+                    <p>Nothing beats great food when deadlines hit hard.</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon"><i class='bx bx-moon'></i></div>
+                    <span>Sleeping</span>
+                    <p>A well-rested mind is a productive mind — napping is self-care.</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon"><i class='bx bx-cycling'></i></div>
+                    <span>Riding</span>
+                    <p>Hitting the road for a good ride to clear the mind and enjoy the view.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="certs-wrap reveal">
+            <h3 class="hobbies-title"><i class='bx bx-certification'></i> My <span>Certifications</span></h3>
+            <div class="certs-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class='bx bx-file-blank'></i>
+                    </div>
+                    <div class="cert-info">
+                        <span class="cert-name">SAP CAREER TALK</span>
+                        <span class="cert-meta">Certificate of Participation</span>
+                    </div>
+                    <a href="Julius James V. Brocales.pdf" target="_blank" class="cert-btn" aria-label="View Certificate">
+                        <i class='bx bx-link-external'></i> View
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section id="skills" class="skills-section">
+        <div class="section-header reveal">
+            <p class="section-label">What I work with</p>
+            <h2 class="section-title">My <span>Skills</span></h2>
+        </div>
+
+        <div class="skills-container">
+            <div class="skills-category reveal">
+                <h3><i class='bx bx-code'></i> Frontend</h3>
+                <div class="skills-grid">
+                    <div class="skill-card" data-skill="HTML5">
+                        <i class='bx bxl-html5'></i>
+                        <span>HTML5</span>
+                        <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                    </div>
+                    <div class="skill-card" data-skill="CSS3">
+                        <i class='bx bxl-css3'></i>
+                        <span>CSS3</span>
+                        <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                    </div>
+                    <div class="skill-card" data-skill="JavaScript">
+                        <i class='bx bxl-javascript'></i>
+                        <span>JavaScript</span>
+                        <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-category reveal">
+                <h3><i class='bx bx-server'></i> Backend & Languages</h3>
+                <div class="skills-grid">
+                    <div class="skill-card" data-skill="Python">
+                        <i class='bx bxl-python'></i>
+                        <span>Python</span>
+                        <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+                    </div>
+                    <div class="skill-card" data-skill="Java">
+                        <i class='bx bxl-java'></i>
+                        <span>Java</span>
+                        <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+                    </div>
+                    <div class="skill-card" data-skill="C#">
+                        <i class='bx bx-code-curly'></i>
+                        <span>C#</span>
+                        <div class="skill-bar"><div class="skill-fill" data-width="55"></div></div>
+                    </div>
+                    <div class="skill-card" data-skill="GitHub">
+                        <i class='bx bxl-github'></i>
+                        <span>GitHub</span>
+                        <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Applications Used -->
+            <div class="skills-category reveal" style="grid-column: 1 / -1;">
+                <h3><i class='bx bx-desktop'></i> Applications <span style="color: var(--accent);">I Personally Use</span></h3>
+                <div class="skills-grid apps-grid">
+                    <div class="skill-card" data-skill="Visual Studio">
+                        <i class='bx bx-code-alt'></i>
+                        <span>Visual Studio</span>
+                        <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                    </div>
+                    <div class="skill-card" data-skill="Android Studio">
+                        <i class='bx bxl-android'></i>
+                        <span>Android Studio</span>
+                        <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+                    </div>
+                    <div class="skill-card" data-skill="MySQL Workbench">
+                        <i class='bx bx-data'></i>
+                        <span>MySQL Workbench</span>
+                        <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+                    </div>
+                    <div class="skill-card" data-skill="SAP">
+                        <i class='bx bx-briefcase'></i>
+                        <span>SAP</span>
+                        <div class="skill-bar"><div class="skill-fill" data-width="50"></div></div>
+                    </div>
+                    <div class="skill-card" data-skill="ArchiApp">
+                        <i class='bx bx-building-house'></i>
+                        <span>ArchiApp</span>
+                        <div class="skill-bar"><div class="skill-fill" data-width="55"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section id="projects" class="projects-section">
+        <div class="section-header reveal">
+            <p class="section-label">What I've built</p>
+            <h2 class="section-title">My <span>Projects</span></h2>
+        </div>
+
+        <div class="filter-btns reveal">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="app">App</button>
+            <button class="filter-btn" data-filter="video">Video</button>
+        </div>
+
+        <div class="projects-grid">
+
+            <div class="project-card reveal" data-category="web">
+                <div class="project-img">
+                    <img src="foodloop.png" alt="FoodLoop - Carinderia Management System" style="width:100%;height:200px;object-fit:cover;display:block;">
+                    <div class="project-overlay">
+                        <a href="https://github.com/Jy0126" target="_blank" class="project-link"><i class='bx bxl-github'></i> GitHub</a>
+                        <a href="#" class="project-link"><i class='bx bx-link-external'></i> Live</a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <h3>Food Loop</h3>
+                    <p>A carinderia (food stall) management system designed to streamline daily operations — from menu management and order tracking to sales monitoring, helping small food businesses run more efficiently.</p>
+                </div>
+            </div>
+
+            <div class="project-card reveal" data-category="app">
+                <div class="project-img">
+                    <img src="dentcare.png" alt="DentCare - Dental Clinic Management System" style="width:100%;height:200px;object-fit:cover;display:block;">
+                    <div class="project-overlay">
+                        <a href="https://github.com/Jy0126" target="_blank" class="project-link"><i class='bx bxl-github'></i> GitHub</a>
+                        <a href="#" class="project-link"><i class='bx bx-link-external'></i> Live</a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <h3>DentCare</h3>
+                    <p>A dental clinic management system that handles patient records, appointment scheduling, and treatment history — giving clinics a modern digital solution to manage their services and patients with ease.</p>
+                </div>
+            </div>
+
+            <div class="project-card reveal" data-category="video">
+                <div class="project-img">
+                    <img src="alok.jpg" alt="Alok Offer - Professional Ethics Video" style="width:100%;height:200px;object-fit:cover;display:block;">
+                    <div class="project-overlay">
+                        <a href="#" class="project-link"><i class='bx bx-play-circle'></i> Watch</a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="tag">Video</span>
+                        <span class="tag">Ethics</span>
+                        <span class="tag">Awareness</span>
+                    </div>
+                    <h3>Alok (Offer)</h3>
+                    <p>A professional ethics awareness video emphasizing the importance of integrity in organizational conduct — specifically addressing the prohibition of using organizational funds for personal gambling and casino activities.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="contact-section">
+        <div class="section-header reveal">
+            <p class="section-label">Let's connect</p>
+            <h2 class="section-title">Get In <span>Touch</span></h2>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info reveal">
+                <h3>Let's work together!</h3>
+                <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of something amazing. Feel free to reach out!</p>
+
+                <div class="contact-items">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class='bx bx-envelope'></i></div>
+                        <div>
+                            <span class="contact-label">Email</span>
+                            <span class="contact-val">juliusjamesbrocales@email.com</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class='bx bx-map'></i></div>
+                        <div>
+                            <span class="contact-label">Location</span>
+                            <span class="contact-val">Pili, Palestina, Camarines Sur</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class='bx bx-phone'></i></div>
+                        <div>
+                            <span class="contact-label">Status</span>
+                            <span class="contact-val">Open to freelance & internship</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-socials">
+                    <a href="https://www.facebook.com/naija.ibrahim.12/" target="_blank" rel="noopener" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/Jy0126" target="_blank" rel="noopener" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+
+            <form class="contact-form reveal" id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="contactName">Full Name</label>
+                    <input type="text" id="contactName" name="name" placeholder="Your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">Email Address</label>
+                    <input type="email" id="contactEmail" name="email" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactSubject">Subject</label>
+                    <input type="text" id="contactSubject" name="subject" placeholder="What's this about?">
+                </div>
+                <div class="form-group">
+                    <label for="contactMessage">Message</label>
+                    <textarea id="contactMessage" name="message" rows="5" placeholder="Tell me about your project or just say hi!" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                    <i class='bx bx-send'></i> Send Message
+                </button>
+                <p class="form-success" id="formSuccess">✅ Message sent successfully! I'll get back to you soon.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="#home" class="footer-logo">Julius<span>.</span></a>
+            <p>Crafted by Julius James V. Brocales &mdash; © 2026</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+        <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top">
+            <i class='bx bx-chevron-up'></i>
+        </a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
