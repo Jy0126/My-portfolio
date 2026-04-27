@@ -180,13 +180,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // ===== DOWNLOAD CV PLACEHOLDER =====
-    const cvBtn = document.getElementById('downloadCv');
-    if (cvBtn) {
-        cvBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            alert('CV download will be available soon!');
-        });
-    }
+
 
 });
